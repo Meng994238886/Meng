@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	距离2020年1月1日还剩 <span id="day"></span>天 <span id="hour"></span>小时 <span id="min"></span>分钟 <span id="sec"></span>秒
+	<input type="hidden" id="nowtime">
+	<script type="text/javascript">
+		$(function(){
+			// alert(1);
+			$.ajax({
+				url:'time.php',
+				type:'get',
+				data:{},
+				dataType:'json',
+				success:function(e){
+					// console.log(e);
+					$("#nowtime").val(e.time);
+					setTimeout(settime,1000);
+				}
+			});
+		})
+		function settime(){
+			var t = $("#nowtime").val();
+
+			// alert(t);
+
+			var str = '2020 1 1  00:00:00';
+
+			var e = Date();
+
+			// alert(e);
+
+			var et = str.time();
+
+			alert(et);
+		}
+	</script>
+</body>
+</html>
