@@ -1,30 +1,20 @@
 <?php 
 
 
+echo zhong(5,6);
 
-echo Numberof(10);
+function zhong($x,$y){
 
-function Numberof($str)
-{
-	// echo $str;
+for ($i=0; $i < $x; $i++) { 
+	# code...
+	for ($j=0; $j < $y; $j++) { 
+		# code...
 
-	// if($a = $str/2){
-		
-	// }else if($str%2==1){
-	// 	echo 1;
-	// }
-
-	$aa = decbin($str.',');
-
-	return substr_count($aa, 1);
+		return $x*$y;
+	}
+}
 
 
-	// $arr[] = explode(' ', $aa);
-
-	// var_dump($aa);
-
-
-	
 }
 
 
